@@ -57,17 +57,21 @@ public class SettingsServiceImpl implements PortletServiceProvider, SettingsServ
         }
         // check if the path exist, if not create it and copy the template files (from WEB-INF/CustomPortal) to it
         File path = new File(settingsPath);
+        
         log.info("GridSphere Settings will be saved in: " + settingsPath);
         if (!path.exists()) {
+        	log.info("GridSphere ConfigDir did not exist, created.");
             path.mkdirs();
-            log.info("GridSphere ConfigDir did not exist, created.");
-            try {
-                copyFiles(config.getServletContext().getRealPath("/WEB-INF/CustomPortal"), settingsPath);
-                log.info("Copy files to directory");
-            } catch (IOException e) {
-                log.error("Could not copy files to defined destination: " + config.getServletContext().getRealPath("/WEB-INF/CustomPortal") + " to " + settingsPath);
-            }
-
+        }else {
+        	log.info("Path does not exist " + path.getAbsolutePath());
+        }
+        
+        try {
+        	log.info("About to copy files to directory");
+            copyFiles(config.getServletContext().getRealPath("/WEB-INF/CustomPortal"), settingsPath);
+            log.info("Copy files to directory");
+        } catch (IOException e) {
+            log.error("Could not copy files to defined destination: " + config.getServletContext().getRealPath("/WEB-INF/CustomPortal") + " to " + settingsPath);
         }
     }
 

@@ -52,6 +52,7 @@
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
 			<version>2.0</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.directwebremoting</groupId>
@@ -229,6 +230,7 @@
 			<artifactId>serializer</artifactId>
 			<version>2.7.2</version>
 		</dependency>
+<!--
 		<dependency>
 			<groupId>asm</groupId>
 			<artifactId>asm</artifactId>
@@ -239,6 +241,7 @@
 			<artifactId>asm-attrs</artifactId>
 			<version>1.5.3</version>
 		</dependency>
+-->
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib-nodep</artifactId>
@@ -347,11 +350,13 @@
 			<version>1.2.2</version>
 		</dependency>
 
+<!--
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
 			<version>2.1_3</version>
 		</dependency>
+-->
 
 
 		<dependency>
