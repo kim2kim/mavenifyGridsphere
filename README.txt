@@ -28,7 +28,12 @@ To report bugs, please use the bugtracker at http://bugs.gridsphere.org
 
 The GridSphere Team	http://www.gridsphere.org
 
+Khim Changes
+- Bypassing build.properties for now and hard coding the values into the configuration files.
+- If you get lucene lock issue and a bunch of lucene exceptions, delete the /Users/khim.ung/.gridsphere/content/repository/.lock directory
 
+Bugs
+ - XML not getting loaded properly when launched via jetty
 
 
 
